@@ -9,7 +9,7 @@ export function AboutPreview() {
       <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
         <figure className="order-2 lg:order-1">
           <img
-            src={portraitAsset.url}
+            src="images/kela-01.png"
             alt={t.about.portraitAlt}
             className="aspect-[4/5] w-full object-cover"
             loading="lazy"

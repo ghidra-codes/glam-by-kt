@@ -15,7 +15,7 @@ export function BrandMark({
   return (
     <span className={cn("flex min-w-0 items-center gap-3", className)}>
       <img
-        src={logoAsset.url}
+        src="images/logo-glam-by-kt.jpg"
         alt=""
         aria-hidden="true"
         width={40}

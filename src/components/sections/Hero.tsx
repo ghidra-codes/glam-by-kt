@@ -33,7 +33,7 @@ export function Hero() {
 
         <figure className="relative">
           <img
-            src={salonAsset.url}
+            src="images/kela-02.png"
             alt={t.hero.portraitAlt}
             className="aspect-[4/5] w-full object-cover"
             loading="eager"
