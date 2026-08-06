@@ -1,24 +1,43 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { SiteHeader } from "@/components/SiteHeader";
+import { SiteFooter } from "@/components/SiteFooter";
+import { Hero } from "@/components/sections/Hero";
+import { Services } from "@/components/sections/Services";
+import { AboutPreview } from "@/components/sections/AboutPreview";
+import { SelectedWork } from "@/components/sections/SelectedWork";
+import { BookingCta } from "@/components/sections/BookingCta";
+import { I18nProvider } from "@/lib/i18n";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const title = "Glam By KT — Hair & Makeup Artist in Stockholm";
+const description =
+  "Glam By KT is Kela's Stockholm studio for hair colour — bleaching, highlights, toning, colouring, cutting and makeup. Book through BokaDirekt.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <I18nProvider>
+      <div className="flex min-h-screen flex-col">
+        <SiteHeader />
+        <main className="flex-1">
+          <Hero />
+          <Services />
+          <AboutPreview />
+          <SelectedWork />
+          <BookingCta />
+        </main>
+        <SiteFooter />
+      </div>
+    </I18nProvider>
   );
 }
