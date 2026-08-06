@@ -161,10 +161,7 @@ const translations = {
       logoSlot: "Logo slot",
     },
   },
-} satisfies Record<Language, unknown> as { sv: DictShape; en: DictShape };
-
-type DictShape = typeof rawSv;
-const rawSv = {} as never;
+};
 
 type I18nValue = {
   language: Language;
@@ -192,7 +189,7 @@ export function I18nProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const value = useMemo(
-    () => ({ language, setLanguage, t: translations[language] as Dict }),
+    () => ({ language, setLanguage, t: translations[language] }),
     [language, setLanguage],
   );
 
