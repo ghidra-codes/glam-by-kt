@@ -6,20 +6,20 @@ export function Hero() {
   const { t } = useI18n();
 
   return (
-    <section id="top" aria-labelledby="hero-title" className="shell pt-16 pb-20 lg:pt-24 lg:pb-32">
-      <div className="grid items-end gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.8fr)] lg:gap-20">
+    <section id="top" aria-labelledby="hero-title" className="shell pt-14 pb-20 lg:pt-20 lg:pb-28">
+      <div className="grid items-end gap-14 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.85fr)] lg:gap-24">
         <div className="max-w-xl">
           <p className="eyebrow">{t.hero.eyebrow}</p>
           <h1
             id="hero-title"
-            className="text-ink mt-6 text-[clamp(2.75rem,8vw,5.5rem)] leading-[0.95]"
+            className="text-ink mt-7 text-[clamp(2.75rem,7.5vw,5.25rem)] leading-[0.95]"
           >
             {t.hero.title}
           </h1>
           <p className="text-muted-foreground mt-8 max-w-md text-base leading-relaxed">
             {t.hero.lead}
           </p>
-          <div className="mt-10 flex flex-wrap items-center gap-4">
+          <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
             <BookingButton size="lg" />
             <a
               href="#services"
@@ -28,12 +28,12 @@ export function Hero() {
               {t.hero.secondary}
             </a>
           </div>
-          <p className="text-muted-foreground mt-6 text-xs">{t.booking.via}</p>
+          <p className="text-muted-foreground mt-5 text-xs">{t.booking.via}</p>
         </div>
 
         <figure className="relative">
           <img
-            src="images/kela-02.png"
+            src={salonAsset.url}
             alt={t.hero.portraitAlt}
             className="aspect-[4/5] w-full object-cover"
             loading="eager"
@@ -44,6 +44,15 @@ export function Hero() {
           />
         </figure>
       </div>
+
+      <dl className="border-border/70 mt-16 grid gap-8 border-t pt-8 sm:grid-cols-3 lg:mt-20">
+        {t.hero.facts.map((fact) => (
+          <div key={fact.label}>
+            <dt className="eyebrow">{fact.label}</dt>
+            <dd className="font-display text-ink mt-2 text-3xl lg:text-4xl">{fact.value}</dd>
+          </div>
+        ))}
+      </dl>
     </section>
   );
 }

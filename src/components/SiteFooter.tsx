@@ -1,16 +1,19 @@
 import { BookingButton } from "@/components/BookingButton";
 import { BrandMark } from "@/components/BrandMark";
 import { LanguageToggle } from "@/components/LanguageToggle";
-import { INSTAGRAM_URL, useI18n } from "@/lib/i18n";
+import { INSTAGRAM_HANDLE, INSTAGRAM_URL, useI18n } from "@/lib/i18n";
 
 export function SiteFooter() {
   const { t } = useI18n();
 
   return (
     <footer id="contact" className="border-border/70 border-t">
-      <div className="shell grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4 lg:py-20">
+      <div className="shell grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.2fr_1fr_1fr_1fr] lg:py-20">
         <div>
-          <BrandMark />
+          <BrandMark size="lg" />
+          <p className="text-muted-foreground mt-5 max-w-xs text-sm leading-relaxed">
+            {t.footer.tagline}
+          </p>
         </div>
 
         <div>
@@ -26,15 +29,11 @@ export function SiteFooter() {
             href={INSTAGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            data-instagram-placeholder="true"
             className="link-rule text-ink mt-4 inline-block text-sm"
           >
-            {t.footer.instagram}
+            Instagram {INSTAGRAM_HANDLE}
             <span className="sr-only"> ({t.booking.newTab})</span>
           </a>
-          <p className="text-muted-foreground mt-3 max-w-xs text-xs leading-relaxed">
-            {t.footer.instagramPlaceholder}
-          </p>
         </div>
 
         <div className="flex flex-col items-start gap-5">

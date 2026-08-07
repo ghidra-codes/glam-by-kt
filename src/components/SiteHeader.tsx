@@ -11,9 +11,11 @@ export function SiteHeader() {
   const links = [
     { href: "#services", label: t.nav.services },
     { href: "#about", label: t.nav.about },
+    { href: "#education", label: t.nav.education },
     { href: "#work", label: t.nav.work },
     { href: "#contact", label: t.nav.contact },
   ];
+
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";

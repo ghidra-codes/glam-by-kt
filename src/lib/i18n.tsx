@@ -12,15 +12,12 @@ export type Language = "sv" | "en";
 
 const STORAGE_KEY = "glam-by-kt-language";
 
-/**
- * PLACEHOLDER — the real BokaDirekt profile URL has not been supplied yet.
- * Replace this single constant once the client provides it.
- */
-export const BOOKING_URL = "#booking-url-placeholder";
-export const BOOKING_URL_IS_PLACEHOLDER = true;
+/** Official BokaDirekt profile — all appointments are booked externally. */
+export const BOOKING_URL = "https://www.bokadirekt.se/places/dear-beauty-60384/";
 
-/** PLACEHOLDER — awaiting the client's Instagram handle / URL. */
-export const INSTAGRAM_URL = "#instagram-url-placeholder";
+/** Official Instagram for Glam By KT. */
+export const INSTAGRAM_URL = "https://www.instagram.com/glam_by_kt/";
+export const INSTAGRAM_HANDLE = "@glam_by_kt";
 
 type Dict = typeof translations.sv;
 
@@ -29,7 +26,8 @@ const translations = {
     nav: {
       services: "Tjänster",
       about: "Om Kela",
-      work: "Utvalt arbete",
+      education: "Utbildning",
+      work: "Galleri",
       contact: "Kontakt",
       menu: "Meny",
       close: "Stäng",
@@ -38,66 +36,134 @@ const translations = {
       cta: "Boka tid",
       via: "Bokning sker via BokaDirekt",
       newTab: "öppnas i ny flik",
-      pending: "Bokningslänk inväntas",
     },
     language: { label: "Språk", sv: "Svenska", en: "English" },
     hero: {
       eyebrow: "Stockholm · Hår & Makeup",
-      title: "Hårkonst med precision",
-      lead: "Kela är hårstylist och makeupartist i Stockholm med fokus på färg — blekning, slingor, toning och skräddarsydd klippning.",
+      title: "Färg, precision och 25 års erfarenhet",
+      lead: "Glam By KT är Kelas personliga varumärke — hårstylist och makeupartist i Stockholm med specialistkompetens inom blekning, slingor, toning och färg.",
       secondary: "Se tjänster",
       portraitAlt: "Kela i salongen, iförd svart kavaj",
+      facts: [
+        { value: "2001", label: "I branschen sedan" },
+        { value: "7 år", label: "Utbildning, BES Academy Milano" },
+        { value: "25+", label: "År av yrkeserfarenhet" },
+      ],
     },
     services: {
-      eyebrow: "Specialistområden",
-      title: "Tjänster",
-      lead: "Varje behandling planeras utifrån hårets kondition, struktur och önskat resultat.",
-      note: "Behandlingsinnehåll, tidsåtgång och priser visas i BokaDirekt.",
-      items: [
-        { title: "Blekning", body: "Ljusare resultat planerat utifrån hårets kondition." },
-        { title: "Slingor", body: "Placering anpassad efter form, växtriktning och önskat uttryck." },
-        { title: "Toning", body: "Nyansering som justerar ton och djup." },
+      eyebrow: "Tjänster",
+      title: "Specialistområden",
+      lead: "Varje behandling planeras utifrån hårets kondition, struktur och önskat resultat. Tyngdpunkten ligger på avancerat färgarbete.",
+      colourTitle: "Färgspecialisering",
+      colourItems: [
+        {
+          title: "Blekning",
+          body: "Ljusare resultat planerat utifrån hårets kondition och utgångsläge.",
+        },
+        {
+          title: "Slingor",
+          body: "Placering anpassad efter ansiktsform, växtriktning och önskat uttryck.",
+        },
+        { title: "Toning", body: "Nyansering som justerar ton, djup och glans." },
         { title: "Färgning", body: "Färgarbete med jämnhet och hållbarhet i fokus." },
-        { title: "Klippning", body: "Klippning formad efter hårets fall och personliga uttryck." },
-        { title: "Makeup", body: "Makeup för fotografering, fest och bröllop." },
       ],
+      moreTitle: "Även hos Kela",
+      moreItems: [
+        { title: "Klippning", body: "Precisionsklippning formad efter hårets fall." },
+        { title: "Styling", body: "Styling för vardag, fest och fotografering." },
+        { title: "Bröllopsuppsättning", body: "Hår för bröllop och högtid." },
+        { title: "Avancerad makeup", body: "Makeup för fest, event, bröllop och foto." },
+      ],
+      note: "Behandlingsinnehåll, tidsåtgång och priser visas i BokaDirekt.",
     },
     about: {
       eyebrow: "Om Kela",
-      title: "Erfarenhet, teknik och omsorg",
-      body: "Kela arbetar som hårstylist och makeupartist i Stockholm med särskild inriktning mot färgarbete. Arbetssättet är metodiskt: analys av hårets utgångsläge, en tydlig plan och ett resultat som ska bära över tid.",
-      note: "PLATSHÅLLARE — fullständig biografi, utbildningar och yrkesbakgrund inväntas från klienten.",
-      link: "Mer om Kela",
-      portraitAlt: "Porträtt av Kela på kontoret",
+      title: "En resa som började 2001",
+      paragraphs: [
+        "Min resa i skönhetsbranschen började 2001, driven av en djup passion för hårkonst och ett orubbligt engagemang för hantverket. Målet har hela tiden varit att fortsätta växa, förfina mina tekniker och leverera exceptionella resultat för varje kund.",
+        "Under sju år utbildade jag mig vid den ansedda BES Academy i Milano, där jag specialiserade mig på precisionsklippning, avancerade färgtekniker och de senaste trenderna inom hårvård. Den grunden formade både min tekniska kompetens och min konstnärliga blick.",
+        "Karriären växte vidare till tv-branschen i Albanien, där jag arbetade som hårstylist och makeupartist för tv-produktioner och kända artister. Det stärkte min kreativitet och min förmåga att leverera felfria resultat under höga professionella krav.",
+        "Idag är jag Professional Technical Educator för Albanien med Lisap Milano. Genom min egen akademi i Albanien har jag utbildat blivande hårstylister och hjälpt dem utveckla teknik, självförtroende och passion för yrket.",
+        "Jag har också specialiserat mig på slingtekniker genom avancerade Masterclasses i Milano och seminarier ledda av italienska hårmästare i Tirana. Det har låtit mig förfina moderna färgtekniker och skapa naturligt eleganta, skräddarsydda resultat.",
+      ],
+      missionTitle: "Mitt uppdrag",
+      mission:
+        "Med över 25 års erfarenhet är uppdraget detsamma: att framhäva naturlig skönhet, inspirera självförtroende och se till att varje kund lämnar salongen vacker, stärkt och omhändertagen.",
+      portraitAlt: "Porträtt av Kela",
+      credentialsTitle: "Bakgrund i korthet",
+      credentials: [
+        { year: "2001", title: "Start i branschen", body: "Yrkesdebut inom hår och skönhet." },
+        {
+          year: "7 år",
+          title: "BES Academy, Milano",
+          body: "Precisionsklippning och avancerad färg.",
+        },
+        {
+          year: "TV",
+          title: "Albansk television",
+          body: "Hår och makeup för produktioner och artister.",
+        },
+        {
+          year: "Idag",
+          title: "Lisap Milano",
+          body: "Professional Technical Educator för Albanien.",
+        },
+        {
+          year: "Egen akademi",
+          title: "Utbildare i Albanien",
+          body: "Har utbildat blivande hårstylister.",
+        },
+        {
+          year: "Milano",
+          title: "Masterclasses",
+          body: "Avancerade slingtekniker och seminarier i Tirana.",
+        },
+      ],
+    },
+    education: {
+      eyebrow: "Utbildning & utbildarroll",
+      title: "Kontinuerlig vidareutbildning",
+      lead: "Bilder från Kelas utbildningsmiljöer och utbildarroll — inte kundarbeten.",
+      captions: [
+        "Avancerad Masterclass i slingteknik, Milano.",
+        "Lisap Milano — där Kela är Professional Technical Educator för Albanien.",
+        "Utbildningssal, BES Academy-miljö.",
+      ],
+    },
+    masterclass: {
+      eyebrow: "Kommande",
+      title: "Master Classes",
+      body: "Kela planerar Master Classes i bland annat slingteknik och toning för yrkesverksamma frisörer.",
+      tbd: "TBD – detaljer om datum, plats, innehåll och anmälan är ännu inte fastställda.",
     },
     work: {
-      eyebrow: "Utvalt arbete",
-      title: "Galleri",
+      eyebrow: "Galleri",
+      title: "Utvalt arbete",
       lead: "Ett urval av färg- och stylingarbeten publiceras här när bilderna är godkända.",
       placeholder: "Bildplatshållare",
-      pending: "PLATSHÅLLARE — godkända portföljbilder inväntas.",
+      pending: "TBD – godkända portföljbilder inväntas.",
+      instagram: "Se senaste arbeten på Instagram",
     },
     cta: {
       eyebrow: "Bokning",
       title: "Boka din tid",
-      body: "All tidsbokning sker via BokaDirekt.",
+      body: "All tidsbokning sker via BokaDirekt hos Dear Beauty i Stockholm.",
     },
     footer: {
       contact: "Kontakt",
-      contactPlaceholder: "PLATSHÅLLARE — kontaktuppgifter och adress inväntas.",
+      contactPlaceholder: "TBD – kontaktuppgifter och adress inväntas.",
       follow: "Följ",
-      instagram: "Instagram",
-      instagramPlaceholder: "PLATSHÅLLARE — Instagram-länk inväntas.",
       book: "Boka",
       rights: "Alla rättigheter förbehållna.",
-      logoSlot: "Logotypplats",
+      tagline: "Hårstylist & makeupartist i Stockholm.",
     },
   },
   en: {
     nav: {
       services: "Services",
       about: "About Kela",
-      work: "Selected work",
+      education: "Education",
+      work: "Gallery",
       contact: "Contact",
       menu: "Menu",
       close: "Close",
@@ -106,59 +172,123 @@ const translations = {
       cta: "Book appointment",
       via: "Booking is handled by BokaDirekt",
       newTab: "opens in a new tab",
-      pending: "Booking link pending",
     },
     language: { label: "Language", sv: "Svenska", en: "English" },
     hero: {
       eyebrow: "Stockholm · Hair & Makeup",
-      title: "Hair artistry with precision",
-      lead: "Kela is a Stockholm-based hair stylist and makeup artist focused on colour — bleaching, highlights, toning and tailored cutting.",
+      title: "Colour, precision and 25 years of craft",
+      lead: "Glam By KT is Kela's personal brand — a Stockholm hair stylist and makeup artist with specialist expertise in bleaching, highlights, toning and colour.",
       secondary: "View services",
       portraitAlt: "Kela in the salon, wearing a black blazer",
+      facts: [
+        { value: "2001", label: "In the industry since" },
+        { value: "7 yrs", label: "Training, BES Academy Milan" },
+        { value: "25+", label: "Years of experience" },
+      ],
     },
     services: {
-      eyebrow: "Specialist areas",
-      title: "Services",
-      lead: "Every treatment is planned around hair condition, structure and the desired result.",
-      note: "Treatment details, duration and pricing are shown in BokaDirekt.",
-      items: [
+      eyebrow: "Services",
+      title: "Specialist areas",
+      lead: "Every treatment is planned around hair condition, structure and the desired result, with advanced colour work at the centre.",
+      colourTitle: "Colour specialisation",
+      colourItems: [
         { title: "Bleaching", body: "Lighter results planned around the condition of the hair." },
-        { title: "Highlights", body: "Placement adapted to shape, growth and desired effect." },
-        { title: "Toning", body: "Refinement that adjusts tone and depth." },
+        {
+          title: "Highlights",
+          body: "Placement adapted to face shape, growth pattern and desired effect.",
+        },
+        { title: "Toning", body: "Refinement that adjusts tone, depth and shine." },
         { title: "Colouring", body: "Colour work focused on evenness and longevity." },
-        { title: "Cutting", body: "Cuts shaped around how the hair falls and personal expression." },
-        { title: "Makeup", body: "Makeup for photography, events and weddings." },
       ],
+      moreTitle: "Also with Kela",
+      moreItems: [
+        { title: "Cutting", body: "Precision cutting shaped around how the hair falls." },
+        { title: "Styling", body: "Styling for everyday, events and photography." },
+        { title: "Bridal hair", body: "Hair for weddings and special occasions." },
+        { title: "Advanced makeup", body: "Makeup for parties, events, weddings and photo." },
+      ],
+      note: "Treatment details, duration and pricing are shown in BokaDirekt.",
     },
     about: {
       eyebrow: "About Kela",
-      title: "Experience, technique and care",
-      body: "Kela works as a hair stylist and makeup artist in Stockholm with a particular focus on colour. The approach is methodical: an analysis of the hair's starting point, a clear plan, and a result meant to hold over time.",
-      note: "PLACEHOLDER — full biography, training and professional background pending from the client.",
-      link: "More about Kela",
-      portraitAlt: "Portrait of Kela in the office",
+      title: "A journey that began in 2001",
+      paragraphs: [
+        "My journey in the beauty industry began in 2001, driven by a deep passion for hair artistry and an unwavering commitment to excellence. From the very beginning, my goal has been to continuously grow, refine my skills, and deliver exceptional results for every client.",
+        "For seven years, I trained at the prestigious BES Academy in Milan, where I specialized in the latest trends in hairdressing, precision cutting, and advanced colour techniques. This strong educational foundation shaped my artistic vision and technical expertise.",
+        "My career then expanded into the television industry in Albania, where I worked as a professional hairstylist and makeup artist, creating looks for television productions and renowned singers. This experience strengthened my creativity and my ability to deliver flawless results under the highest professional standards.",
+        "Today I proudly serve as a Professional Technical Educator for Albania with Lisap Milano. Through my own academy in Albania, I have had the privilege of training aspiring hairstylists, helping them develop the skills, confidence and passion needed to succeed.",
+        "I have also specialized in highlight techniques through advanced Masterclasses in Milan and numerous seminars led by renowned Italian hair masters in Tirana. These experiences have allowed me to perfect modern colour techniques and create naturally elegant, customized results for every client.",
+      ],
+      missionTitle: "My mission",
+      mission:
+        "With over 25 years of experience, my mission remains the same: to enhance natural beauty, inspire confidence, and ensure that every client leaves my salon feeling beautiful, empowered and truly cared for.",
+      portraitAlt: "Portrait of Kela",
+      credentialsTitle: "Background at a glance",
+      credentials: [
+        { year: "2001", title: "Career start", body: "First professional years in hair and beauty." },
+        {
+          year: "7 yrs",
+          title: "BES Academy, Milan",
+          body: "Precision cutting and advanced colour.",
+        },
+        {
+          year: "TV",
+          title: "Albanian television",
+          body: "Hair and makeup for productions and singers.",
+        },
+        {
+          year: "Today",
+          title: "Lisap Milano",
+          body: "Professional Technical Educator for Albania.",
+        },
+        {
+          year: "Own academy",
+          title: "Educator in Albania",
+          body: "Trained aspiring hairstylists.",
+        },
+        {
+          year: "Milan",
+          title: "Masterclasses",
+          body: "Advanced highlight techniques and seminars in Tirana.",
+        },
+      ],
+    },
+    education: {
+      eyebrow: "Education & teaching",
+      title: "Continuous professional education",
+      lead: "Images from Kela's education environments and teaching work — not client results.",
+      captions: [
+        "Advanced highlight Masterclass, Milan.",
+        "Lisap Milano — where Kela is Professional Technical Educator for Albania.",
+        "Teaching floor, BES Academy environment.",
+      ],
+    },
+    masterclass: {
+      eyebrow: "Planned",
+      title: "Master Classes",
+      body: "Kela is planning Master Classes in techniques such as highlights and toning for working professionals.",
+      tbd: "TBD – dates, location, content and registration details are not yet confirmed.",
     },
     work: {
-      eyebrow: "Selected work",
-      title: "Gallery",
+      eyebrow: "Gallery",
+      title: "Selected work",
       lead: "A selection of colour and styling work will be published here once imagery is approved.",
       placeholder: "Image placeholder",
-      pending: "PLACEHOLDER — approved portfolio imagery pending.",
+      pending: "TBD – approved portfolio imagery pending.",
+      instagram: "See the latest work on Instagram",
     },
     cta: {
       eyebrow: "Booking",
       title: "Book your appointment",
-      body: "All appointments are booked through BokaDirekt.",
+      body: "All appointments are booked through BokaDirekt at Dear Beauty in Stockholm.",
     },
     footer: {
       contact: "Contact",
-      contactPlaceholder: "PLACEHOLDER — contact details and address pending.",
+      contactPlaceholder: "TBD – contact details and address pending.",
       follow: "Follow",
-      instagram: "Instagram",
-      instagramPlaceholder: "PLACEHOLDER — Instagram link pending.",
       book: "Book",
       rights: "All rights reserved.",
-      logoSlot: "Logo slot",
+      tagline: "Hair stylist & makeup artist in Stockholm.",
     },
   },
 };

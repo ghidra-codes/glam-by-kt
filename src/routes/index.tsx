@@ -3,14 +3,16 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Hero } from "@/components/sections/Hero";
 import { Services } from "@/components/sections/Services";
-import { AboutPreview } from "@/components/sections/AboutPreview";
+import { About } from "@/components/sections/About";
+import { Education } from "@/components/sections/Education";
+import { Masterclasses } from "@/components/sections/Masterclasses";
 import { SelectedWork } from "@/components/sections/SelectedWork";
 import { BookingCta } from "@/components/sections/BookingCta";
 import { I18nProvider } from "@/lib/i18n";
 
 const title = "Glam By KT — Hair & Makeup Artist in Stockholm";
 const description =
-  "Glam By KT is Kela's Stockholm studio for hair colour — bleaching, highlights, toning, colouring, cutting and makeup. Book through BokaDirekt.";
+  "Kela — hair stylist and makeup artist in Stockholm with 25+ years of experience. Specialist in bleaching, highlights, toning and colour. Book via BokaDirekt.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -19,6 +21,8 @@ export const Route = createFileRoute("/")({
       { name: "description", content: description },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Index,
@@ -32,7 +36,9 @@ function Index() {
         <main className="flex-1">
           <Hero />
           <Services />
-          <AboutPreview />
+          <About />
+          <Education />
+          <Masterclasses />
           <SelectedWork />
           <BookingCta />
         </main>
