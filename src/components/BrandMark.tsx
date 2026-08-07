@@ -1,37 +1,47 @@
-import logoAsset from "@/assets/logo-glam-by-kt.jpg.asset.json";
+import logoMark from "@/assets/logo-mark.png.asset.json";
 import { cn } from "@/lib/utils";
 
 /**
- * Reserved slot for the existing Glam By KT logo (client-supplied asset).
+ * Supplied Glam By KT logo. The circular medallion is used at small sizes
+ * (header, footer) alongside a typeset wordmark for legibility.
  * Never replace this mark with a generated alternative.
  */
 export function BrandMark({
   className,
   invert = false,
+  size = "sm",
 }: {
   className?: string;
   invert?: boolean;
+  size?: "sm" | "lg";
 }) {
+  const markSize = size === "lg" ? "h-16 w-16" : "h-11 w-11";
+
   return (
-    <span className={cn("flex min-w-0 items-center gap-3", className)}>
+    <span className={cn("flex min-w-0 items-center gap-3.5", className)}>
       <img
-        src="images/logo-glam-by-kt.jpg"
+        src={logoMark.url}
         alt=""
         aria-hidden="true"
-        width={40}
-        height={40}
-        className="h-10 w-10 shrink-0 rounded-full object-cover"
+        width={size === "lg" ? 64 : 44}
+        height={size === "lg" ? 64 : 44}
+        className={cn("shrink-0 rounded-full object-cover", markSize)}
       />
       <span className="flex min-w-0 flex-col leading-none">
         <span
           className={cn(
-            "font-display truncate text-lg tracking-wide",
+            "font-display truncate tracking-wide",
+            size === "lg" ? "text-2xl" : "text-lg",
             invert ? "text-background" : "text-ink",
           )}
         >
           Glam By KT
         </span>
-        <span className="eyebrow mt-1 text-[0.5625rem]">Hair &amp; Makeup</span>
+        <span
+          className={cn("eyebrow mt-1.5 text-[0.5625rem]", invert && "text-background/60")}
+        >
+          Hair &amp; Makeup
+        </span>
       </span>
     </span>
   );
