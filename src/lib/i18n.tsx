@@ -124,6 +124,8 @@ const translations = {
       eyebrow: "Utbildning & utbildarroll",
       title: "Kontinuerlig vidareutbildning",
       lead: "Bilder från Kelas utbildningsmiljöer och utbildarroll — inte kundarbeten.",
+      placeholder: "Bildplatshållare",
+      placeholderCaption: "TBD — bild inväntas.",
       captions: [
         "Avancerad Masterclass i slingteknik, Milano.",
         "Lisap Milano — där Kela är Professional Technical Educator för Albanien.",
