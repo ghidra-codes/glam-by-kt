@@ -22,7 +22,7 @@ export function SelectedWork() {
             href={INSTAGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="link-rule text-ink mt-5 inline-flex items-center gap-2 text-[0.6875rem] leading-none font-medium tracking-editorial uppercase"
+            className="text-ink hover:text-champagne-deep mt-5 inline-flex items-center gap-2 text-[0.6875rem] leading-none font-medium tracking-editorial uppercase transition-colors duration-300"
           >
             <Instagram
               aria-hidden="true"
