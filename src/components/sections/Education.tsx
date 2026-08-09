@@ -26,9 +26,19 @@ export function Education() {
           </p>
         </div>
 
-        <ul className="mt-14 grid max-w-[44rem] gap-8 sm:grid-cols-2 lg:gap-10">
+        <ul className="mt-14 grid grid-cols-1 gap-8 sm:grid-cols-3 lg:gap-10">
+          <li className="w-full">
+            <figure>
+              <div className="placeholder-surface border-border/70 flex aspect-[3/4] items-center justify-center border">
+                <span className="eyebrow px-4 text-center">{t.education.placeholder}</span>
+              </div>
+              <figcaption className="text-muted-foreground mt-4 text-xs leading-relaxed">
+                {t.education.placeholderCaption}
+              </figcaption>
+            </figure>
+          </li>
           {images.map((src, index) => (
-            <li key={src} className="mx-auto w-full max-w-[21rem]">
+            <li key={src} className="w-full">
               <figure>
                 <img
                   src={src}
@@ -37,7 +47,7 @@ export function Education() {
                   height={443}
                   className="aspect-[3/4] w-full object-cover"
                   loading="lazy"
-                  sizes="(min-width: 640px) 21rem, 100vw"
+                  sizes="(min-width: 640px) 33vw, 100vw"
                 />
 
                 <figcaption className="text-muted-foreground mt-4 text-xs leading-relaxed">
