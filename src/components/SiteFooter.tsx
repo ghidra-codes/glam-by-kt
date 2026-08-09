@@ -1,4 +1,6 @@
+import { Instagram } from "lucide-react";
 import { BookingButton } from "@/components/BookingButton";
+
 import { BrandMark } from "@/components/BrandMark";
 import { LanguageToggle } from "@/components/LanguageToggle";
 import { INSTAGRAM_HANDLE, INSTAGRAM_URL, useI18n } from "@/lib/i18n";
@@ -29,12 +31,15 @@ export function SiteFooter() {
             href={INSTAGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="link-rule text-ink mt-4 inline-block text-sm"
+            aria-label={`Instagram ${INSTAGRAM_HANDLE}`}
+            className="link-rule text-ink mt-4 inline-flex items-center gap-2 text-sm"
           >
-            Instagram {INSTAGRAM_HANDLE}
+            <Instagram aria-hidden="true" className="h-4 w-4" strokeWidth={1.5} />
+            {INSTAGRAM_HANDLE}
             <span className="sr-only"> ({t.booking.newTab})</span>
           </a>
         </div>
+
 
         <div className="flex flex-col items-start gap-5">
           <h2 className="eyebrow">{t.footer.book}</h2>

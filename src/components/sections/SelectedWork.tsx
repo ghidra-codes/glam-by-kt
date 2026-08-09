@@ -1,4 +1,6 @@
+import { Instagram } from "lucide-react";
 import { INSTAGRAM_HANDLE, INSTAGRAM_URL, useI18n } from "@/lib/i18n";
+
 
 const slots = ["a", "b", "c", "d"];
 
@@ -20,11 +22,16 @@ export function SelectedWork() {
             href={INSTAGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="link-rule text-ink mt-5 inline-block text-[0.6875rem] font-medium tracking-editorial uppercase"
+            className="link-rule text-ink mt-5 inline-flex items-center gap-2 text-[0.6875rem] font-medium tracking-editorial uppercase"
           >
-            {t.work.instagram} — {INSTAGRAM_HANDLE}
-            <span className="sr-only"> ({t.booking.newTab})</span>
+            <Instagram aria-hidden="true" className="h-3.5 w-3.5" strokeWidth={1.5} />
+            {INSTAGRAM_HANDLE}
+            <span className="sr-only">
+              {" "}
+              — {t.work.instagram} ({t.booking.newTab})
+            </span>
           </a>
+
         </div>
       </div>
 
