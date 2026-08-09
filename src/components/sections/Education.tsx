@@ -26,16 +26,20 @@ export function Education() {
           </p>
         </div>
 
-        <ul className="mt-14 grid gap-8 sm:grid-cols-2 lg:gap-10">
+        <ul className="mt-14 grid max-w-[44rem] gap-8 sm:grid-cols-2 lg:gap-10">
           {images.map((src, index) => (
-            <li key={src}>
+            <li key={src} className="mx-auto w-full max-w-[21rem]">
               <figure>
                 <img
                   src={src}
                   alt={t.education.captions[index]}
+                  width={332}
+                  height={443}
                   className="aspect-[3/4] w-full object-cover"
                   loading="lazy"
+                  sizes="(min-width: 640px) 21rem, 100vw"
                 />
+
                 <figcaption className="text-muted-foreground mt-4 text-xs leading-relaxed">
                   {t.education.captions[index]}
                 </figcaption>
