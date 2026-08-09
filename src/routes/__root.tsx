@@ -115,7 +115,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    {/* Swedish is the default rendered language; I18nProvider updates this on switch. */}
+    <html lang="sv">
       <head>
         <HeadContent />
       </head>
