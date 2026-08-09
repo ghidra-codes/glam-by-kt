@@ -32,9 +32,9 @@ export function SiteFooter() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`Instagram ${INSTAGRAM_HANDLE}`}
-            className="link-rule text-ink mt-4 inline-flex items-center gap-2 text-sm"
+            className="text-ink hover:text-champagne-deep mt-4 inline-flex items-center gap-2 text-sm leading-none transition-colors duration-300"
           >
-            <Instagram aria-hidden="true" className="h-4 w-4" strokeWidth={1.5} />
+            <Instagram aria-hidden="true" className="h-4 w-4 shrink-0" strokeWidth={1.5} />
             {INSTAGRAM_HANDLE}
             <span className="sr-only"> ({t.booking.newTab})</span>
           </a>
