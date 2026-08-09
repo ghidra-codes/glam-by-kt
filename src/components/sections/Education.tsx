@@ -26,7 +26,7 @@ export function Education() {
           </p>
         </div>
 
-        <ul className="mt-14 grid max-w-[44rem] gap-8 sm:grid-cols-2 lg:gap-10">
+        <ul className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
           {images.map((src, index) => (
             <li key={src} className="mx-auto w-full max-w-[21rem]">
               <figure>
@@ -46,6 +46,16 @@ export function Education() {
               </figure>
             </li>
           ))}
+          <li className="mx-auto w-full max-w-[21rem]">
+            <figure>
+              <div className="placeholder-surface border-border/70 flex aspect-[3/4] w-full items-center justify-center border">
+                <span className="eyebrow">{t.education.placeholder}</span>
+              </div>
+              <figcaption className="text-muted-foreground mt-4 text-xs leading-relaxed">
+                {t.education.placeholderCaption}
+              </figcaption>
+            </figure>
+          </li>
         </ul>
       </div>
     </section>
