@@ -258,6 +258,8 @@ const translations = {
       eyebrow: "Education & teaching",
       title: "Continuous professional education",
       lead: "Images from Kela's education environments and teaching work — not client results.",
+      placeholder: "Image placeholder",
+      placeholderCaption: "TBD — image pending.",
       captions: [
         "Advanced highlight Masterclass, Milan.",
         "Lisap Milano — where Kela is Professional Technical Educator for Albania.",
