@@ -128,6 +128,8 @@ const translations = {
         "Avancerad Masterclass i slingteknik, Milano.",
         "Lisap Milano — där Kela är Professional Technical Educator för Albanien.",
       ],
+      placeholder: "Bildplatshållare",
+      placeholderCaption: "TBD – bild inväntas.",
     },
     masterclass: {
       eyebrow: "Kommande",
@@ -260,6 +262,8 @@ const translations = {
         "Advanced highlight Masterclass, Milan.",
         "Lisap Milano — where Kela is Professional Technical Educator for Albania.",
       ],
+      placeholder: "Image placeholder",
+      placeholderCaption: "TBD — image pending.",
     },
     masterclass: {
       eyebrow: "Planned",
