@@ -22,9 +22,13 @@ export function SelectedWork() {
             href={INSTAGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="link-rule text-ink mt-5 inline-flex items-center gap-2 text-[0.6875rem] font-medium tracking-editorial uppercase"
+            className="link-rule text-ink mt-5 inline-flex items-center gap-2 text-[0.6875rem] leading-none font-medium tracking-editorial uppercase"
           >
-            <Instagram aria-hidden="true" className="h-3.5 w-3.5" strokeWidth={1.5} />
+            <Instagram
+              aria-hidden="true"
+              className="h-3.5 w-3.5 shrink-0 translate-y-[0.5px]"
+              strokeWidth={1.5}
+            />
             {INSTAGRAM_HANDLE}
             <span className="sr-only">
               {" "}
