@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { Menu, X } from "lucide-react";
+
 import { BookingButton } from "@/components/BookingButton";
 import { BrandMark } from "@/components/BrandMark";
 import { LanguageToggle } from "@/components/LanguageToggle";
@@ -55,14 +57,16 @@ export function SiteHeader() {
             onClick={() => setOpen((value) => !value)}
             aria-expanded={open}
             aria-controls="mobile-nav"
-            className="text-ink flex shrink-0 items-center gap-2 py-2 text-[0.6875rem] font-medium tracking-editorial uppercase lg:hidden"
+            className="text-ink flex shrink-0 cursor-pointer items-center gap-2 py-2 text-[0.6875rem] font-medium tracking-editorial uppercase lg:hidden"
           >
             {open ? t.nav.close : t.nav.menu}
-            <span aria-hidden="true" className="flex w-4 flex-col gap-1">
-              <span className="bg-ink h-px w-full" />
-              <span className="bg-ink h-px w-full" />
-            </span>
+            {open ? (
+              <X aria-hidden="true" className="h-4 w-4" strokeWidth={1.5} />
+            ) : (
+              <Menu aria-hidden="true" className="h-4 w-4" strokeWidth={1.5} />
+            )}
           </button>
+
         </div>
       </div>
 

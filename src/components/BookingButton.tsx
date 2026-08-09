@@ -1,4 +1,6 @@
 import type { ReactNode } from "react";
+import { ArrowUpRight } from "lucide-react";
+
 import { BOOKING_URL, useI18n } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 
@@ -46,16 +48,8 @@ export function BookingButton({
     >
       <span>{children ?? t.booking.cta}</span>
       <span className="sr-only"> ({t.booking.newTab})</span>
-      <svg
-        aria-hidden="true"
-        viewBox="0 0 12 12"
-        className="h-2.5 w-2.5"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.25"
-      >
-        <path d="M3 9 9 3M9 3H4.5M9 3v4.5" />
-      </svg>
+      <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" strokeWidth={1.5} />
+
     </a>
   );
 }

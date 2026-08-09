@@ -1,11 +1,11 @@
-import besAsset from "@/assets/edu-bes.png.asset.json";
 import lisapAsset from "@/assets/edu-lisap.png.asset.json";
 import masterclassAsset from "@/assets/edu-masterclass.png.asset.json";
 import { useI18n } from "@/lib/i18n";
 
 export function Education() {
   const { t } = useI18n();
-  const images = [masterclassAsset.url, lisapAsset.url, besAsset.url];
+  const images = [masterclassAsset.url, lisapAsset.url];
+
 
   return (
     <section
@@ -26,7 +26,7 @@ export function Education() {
           </p>
         </div>
 
-        <ul className="mt-14 grid gap-8 sm:grid-cols-3 lg:gap-10">
+        <ul className="mt-14 grid gap-8 sm:grid-cols-2 lg:gap-10">
           {images.map((src, index) => (
             <li key={src}>
               <figure>
