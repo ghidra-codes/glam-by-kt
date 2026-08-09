@@ -43,7 +43,7 @@ export function BookingButton({
       href={BOOKING_URL}
       target="_blank"
       rel="noopener noreferrer"
-      data-booking-placeholder="true"
+      
       className={cn(base, variants[variant], sizes[size], className)}
     >
       <span>{children ?? t.booking.cta}</span>
