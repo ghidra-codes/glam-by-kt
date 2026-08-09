@@ -127,7 +127,6 @@ const translations = {
       captions: [
         "Avancerad Masterclass i slingteknik, Milano.",
         "Lisap Milano — där Kela är Professional Technical Educator för Albanien.",
-        "Utbildningssal, BES Academy-miljö.",
       ],
     },
     masterclass: {
@@ -260,7 +259,6 @@ const translations = {
       captions: [
         "Advanced highlight Masterclass, Milan.",
         "Lisap Milano — where Kela is Professional Technical Educator for Albania.",
-        "Teaching floor, BES Academy environment.",
       ],
     },
     masterclass: {
