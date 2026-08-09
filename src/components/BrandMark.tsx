@@ -30,8 +30,8 @@ export function BrandMark({
       <span className="flex min-w-0 flex-col leading-none">
         <span
           className={cn(
-            "font-display truncate tracking-wide",
-            size === "lg" ? "text-2xl" : "text-lg",
+            "font-brand truncate",
+            size === "lg" ? "text-2xl tracking-[0.06em]" : "text-lg tracking-[0.04em]",
             invert ? "text-background" : "text-ink",
           )}
         >
