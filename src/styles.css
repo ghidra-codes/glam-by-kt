@@ -18,6 +18,9 @@
 
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-sans: "Karla", ui-sans-serif, system-ui, sans-serif;
+  /* Exclusive to the Glam By KT brand wordmark — distinct from display/body,
+     a refined classical serif that complements the logo script. */
+  --font-brand: "Marcellus", Georgia, serif;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
