@@ -14,9 +14,7 @@ export function BookingCta() {
         >
           {t.cta.title}
         </h2>
-        <p className="text-background/70 mx-auto mt-6 max-w-md text-sm leading-relaxed">
-          {t.cta.body}
-        </p>
+        <p className="text-background/70 mx-auto mt-6 max-w-md text-sm leading-relaxed">{t.cta.body}</p>
         <div className="mt-10 flex justify-center">
           <BookingButton size="lg" variant="inverted" />
         </div>

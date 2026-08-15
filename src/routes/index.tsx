@@ -1,13 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { Hero } from "@/components/sections/Hero";
-import { Services } from "@/components/sections/Services";
+import { SiteHeader } from "@/components/SiteHeader";
 import { About } from "@/components/sections/About";
+import { BookingCta } from "@/components/sections/BookingCta";
 import { Education } from "@/components/sections/Education";
+import { Hero } from "@/components/sections/Hero";
 import { Masterclasses } from "@/components/sections/Masterclasses";
 import { SelectedWork } from "@/components/sections/SelectedWork";
-import { BookingCta } from "@/components/sections/BookingCta";
+import { Services } from "@/components/sections/Services";
 import { I18nProvider } from "@/lib/i18n";
 
 const title = "Glam By KT — Hair & Makeup Artist in Stockholm";

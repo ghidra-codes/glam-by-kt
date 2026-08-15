@@ -13,9 +13,7 @@ export function SiteFooter() {
       <div className="shell grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.2fr_1fr_1fr_1fr] lg:py-20">
         <div>
           <BrandMark size="lg" />
-          <p className="text-muted-foreground mt-5 max-w-xs text-sm leading-relaxed">
-            {t.footer.tagline}
-          </p>
+          <p className="text-muted-foreground mt-5 max-w-xs text-sm leading-relaxed">{t.footer.tagline}</p>
         </div>
 
         <div>
@@ -39,7 +37,6 @@ export function SiteFooter() {
             <span className="sr-only"> ({t.booking.newTab})</span>
           </a>
         </div>
-
 
         <div className="flex flex-col items-start gap-5">
           <h2 className="eyebrow">{t.footer.book}</h2>

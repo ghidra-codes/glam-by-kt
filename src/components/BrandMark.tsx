@@ -1,4 +1,4 @@
-import logoMark from "@/assets/logo-mark.png.asset.json";
+import logoMark from "@/assets/images/logos/Logo-GlamByKT.png";
 import { cn } from "@/lib/utils";
 
 /**
@@ -20,7 +20,7 @@ export function BrandMark({
   return (
     <span className={cn("flex min-w-0 items-center gap-3.5", className)}>
       <img
-        src={logoMark.url}
+        src={logoMark}
         alt=""
         aria-hidden="true"
         width={size === "lg" ? 64 : 44}
@@ -37,9 +37,7 @@ export function BrandMark({
         >
           Glam By KT
         </span>
-        <span
-          className={cn("eyebrow mt-1.5 text-[0.5625rem]", invert && "text-background/60")}
-        >
+        <span className={cn("eyebrow mt-1.5 text-[0.5625rem]", invert && "text-background/60")}>
           Hair &amp; Makeup
         </span>
       </span>

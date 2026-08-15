@@ -1,12 +1,4 @@
-import {
-  createContext,
-  useCallback,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-  type ReactNode,
-} from "react";
+import { createContext, type ReactNode, useCallback, useContext, useEffect, useMemo, useState } from "react";
 
 export type Language = "sv" | "en";
 
@@ -226,7 +218,11 @@ const translations = {
       portraitAlt: "Portrait of Kela",
       credentialsTitle: "Background at a glance",
       credentials: [
-        { year: "2001", title: "Career start", body: "First professional years in hair and beauty." },
+        {
+          year: "2001",
+          title: "Career start",
+          body: "First professional years in hair and beauty.",
+        },
         {
           year: "7 yrs",
           title: "BES Academy, Milan",

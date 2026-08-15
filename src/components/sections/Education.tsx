@@ -1,18 +1,13 @@
-import lisapAsset from "@/assets/edu-lisap.png.asset.json";
-import masterclassAsset from "@/assets/edu-masterclass.png.asset.json";
+import masterclassImage from "@/assets/images/4.png";
+import lisapImage from "@/assets/images/7.png";
 import { useI18n } from "@/lib/i18n";
 
 export function Education() {
   const { t } = useI18n();
-  const images = [masterclassAsset.url, lisapAsset.url];
-
+  const images = [masterclassImage, lisapImage];
 
   return (
-    <section
-      id="education"
-      aria-labelledby="education-title"
-      className="bg-sand/60 py-20 lg:py-28"
-    >
+    <section id="education" aria-labelledby="education-title" className="bg-sand/60 py-20 lg:py-28">
       <div className="shell">
         <div className="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-24">
           <div>

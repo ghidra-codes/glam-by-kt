@@ -1,7 +1,6 @@
 import { Instagram } from "lucide-react";
 import { INSTAGRAM_HANDLE, INSTAGRAM_URL, useI18n } from "@/lib/i18n";
 
-
 const slots = ["a", "b", "c", "d"];
 
 export function SelectedWork() {
@@ -35,7 +34,6 @@ export function SelectedWork() {
               — {t.work.instagram} ({t.booking.newTab})
             </span>
           </a>
-
         </div>
       </div>
 

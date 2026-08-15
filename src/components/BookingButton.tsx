@@ -1,5 +1,5 @@
-import type { ReactNode } from "react";
 import { ArrowUpRight } from "lucide-react";
+import type { ReactNode } from "react";
 
 import { BOOKING_URL, useI18n } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
@@ -30,12 +30,7 @@ const sizes: Record<NonNullable<BookingButtonProps["size"]>, string> = {
  * Single entry point for every booking action.
  * Always external, always a new tab.
  */
-export function BookingButton({
-  variant = "solid",
-  size = "md",
-  className,
-  children,
-}: BookingButtonProps) {
+export function BookingButton({ variant = "solid", size = "md", className, children }: BookingButtonProps) {
   const { t } = useI18n();
 
   return (
@@ -43,13 +38,11 @@ export function BookingButton({
       href={BOOKING_URL}
       target="_blank"
       rel="noopener noreferrer"
-      
       className={cn(base, variants[variant], sizes[size], className)}
     >
       <span>{children ?? t.booking.cta}</span>
       <span className="sr-only"> ({t.booking.newTab})</span>
       <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" strokeWidth={1.5} />
-
     </a>
   );
 }

@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { useEffect, useState } from "react";
 
 import { BookingButton } from "@/components/BookingButton";
 import { BrandMark } from "@/components/BrandMark";
@@ -17,7 +17,6 @@ export function SiteHeader() {
     { href: "#work", label: t.nav.work },
     { href: "#contact", label: t.nav.contact },
   ];
-
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -66,7 +65,6 @@ export function SiteHeader() {
               <Menu aria-hidden="true" className="h-4 w-4" strokeWidth={1.5} />
             )}
           </button>
-
         </div>
       </div>
 

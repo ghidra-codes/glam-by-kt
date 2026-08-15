@@ -1,4 +1,4 @@
-import portraitAsset from "@/assets/kela-portrait.png.asset.json";
+import portraitImage from "@/assets/images/Kela-image001.png";
 import { useI18n } from "@/lib/i18n";
 
 export function About() {
@@ -14,7 +14,7 @@ export function About() {
           </h2>
           <figure className="mt-10">
             <img
-              src={portraitAsset.url}
+              src={portraitImage}
               alt={t.about.portraitAlt}
               className="aspect-[4/5] w-full object-cover"
               loading="lazy"
@@ -40,9 +40,7 @@ export function About() {
 
           <blockquote className="border-champagne/70 mt-12 max-w-xl border-l pl-6">
             <p className="eyebrow">{t.about.missionTitle}</p>
-            <p className="font-display text-ink mt-3 text-xl leading-snug lg:text-2xl">
-              {t.about.mission}
-            </p>
+            <p className="font-display text-ink mt-3 text-xl leading-snug lg:text-2xl">{t.about.mission}</p>
           </blockquote>
 
           <h3 className="eyebrow mt-16">{t.about.credentialsTitle}</h3>
