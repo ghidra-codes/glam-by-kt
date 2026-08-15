@@ -9,7 +9,7 @@ export const BOOKING_URL = "https://www.bokadirekt.se/places/dear-beauty-60384/"
 
 /** Official Instagram for Glam By KT. */
 export const INSTAGRAM_URL = "https://www.instagram.com/glam_by_kt/";
-export const INSTAGRAM_HANDLE = "@glam_by_kt";
+export const INSTAGRAM_HANDLE = "@GLAM_BY_KT";
 
 type Dict = typeof translations.sv;
 
@@ -148,7 +148,6 @@ const translations = {
       follow: "Följ",
       book: "Boka",
       rights: "Alla rättigheter förbehållna.",
-      tagline: "Hårstylist & makeupartist i Stockholm.",
     },
   },
   en: {
@@ -286,7 +285,6 @@ const translations = {
       follow: "Follow",
       book: "Book",
       rights: "All rights reserved.",
-      tagline: "Hair stylist & makeup artist in Stockholm.",
     },
   },
 };

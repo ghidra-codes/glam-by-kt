@@ -1,6 +1,5 @@
 import { Instagram } from "lucide-react";
 import { BookingButton } from "@/components/BookingButton";
-
 import { BrandMark } from "@/components/BrandMark";
 import { LanguageToggle } from "@/components/LanguageToggle";
 import { INSTAGRAM_HANDLE, INSTAGRAM_URL, useI18n } from "@/lib/i18n";
@@ -13,7 +12,6 @@ export function SiteFooter() {
       <div className="shell grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.2fr_1fr_1fr_1fr] lg:py-20">
         <div>
           <BrandMark size="lg" />
-          <p className="text-muted-foreground mt-5 max-w-xs text-sm leading-relaxed">{t.footer.tagline}</p>
         </div>
 
         <div>

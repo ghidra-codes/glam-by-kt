@@ -20,6 +20,7 @@ export function SiteHeader() {
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
+
     return () => {
       document.body.style.overflow = "";
     };
@@ -27,7 +28,7 @@ export function SiteHeader() {
 
   return (
     <header className="bg-background/85 border-border/70 sticky top-0 z-50 border-b backdrop-blur-md">
-      <div className="shell grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 py-4 lg:py-5">
+      <div className="shell grid grid-cols-[minmax(0,1fr)_auto] items-center gap-6 py-2.5">
         <a href="#top" className="min-w-0" aria-label="Glam By KT">
           <BrandMark />
         </a>
@@ -39,7 +40,7 @@ export function SiteHeader() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="link-rule text-ink/80 hover:text-ink text-[0.6875rem] font-medium tracking-editorial uppercase transition-colors"
+                    className="link-rule text-ink/80 hover:text-ink text-xs font-medium tracking-[0.16em] uppercase transition-colors"
                   >
                     {link.label}
                   </a>
@@ -56,9 +57,10 @@ export function SiteHeader() {
             onClick={() => setOpen((value) => !value)}
             aria-expanded={open}
             aria-controls="mobile-nav"
-            className="text-ink flex shrink-0 cursor-pointer items-center gap-2 py-2 text-[0.6875rem] font-medium tracking-editorial uppercase lg:hidden"
+            className="text-ink flex shrink-0 cursor-pointer items-center gap-2 py-2 text-xs font-medium tracking-[0.16em] uppercase lg:hidden"
           >
             {open ? t.nav.close : t.nav.menu}
+
             {open ? (
               <X aria-hidden="true" className="h-4 w-4" strokeWidth={1.5} />
             ) : (
@@ -84,6 +86,7 @@ export function SiteHeader() {
                 </li>
               ))}
             </ul>
+
             <div className="border-border/70 mt-8 flex flex-wrap items-center justify-between gap-4 border-t pt-6">
               <LanguageToggle />
               <BookingButton size="sm" />
