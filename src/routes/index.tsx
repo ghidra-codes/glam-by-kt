@@ -10,7 +10,7 @@ import { SelectedWork } from "@/components/sections/SelectedWork";
 import { Services } from "@/components/sections/Services";
 import { I18nProvider } from "@/lib/i18n";
 
-const title = "Glam By KT — Hair & Makeup Artist in Stockholm";
+const title = "Glam By KT — Hair & Makeup";
 const description =
   "Kela — hair stylist and makeup artist in Stockholm with 25+ years of experience. Specialist in bleaching, highlights, toning and colour. Book via BokaDirekt.";
 
