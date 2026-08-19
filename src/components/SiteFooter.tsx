@@ -10,7 +10,7 @@ export function SiteFooter() {
   return (
     <footer id="contact" className="border-border/70 border-t">
       <div className="shell grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.2fr_1fr_1fr_1fr] lg:py-20">
-        <div>
+        <div className="flex item-center justify-center">
           <BrandMark size="lg" />
         </div>
 
