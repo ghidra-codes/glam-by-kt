@@ -7,6 +7,9 @@ const STORAGE_KEY = "glam-by-kt-language";
 /** Official BokaDirekt profile — all appointments are booked externally. */
 export const BOOKING_URL = "https://www.bokadirekt.se/places/dear-beauty-60384/";
 
+/** Official BokaDirekt staff section  */
+export const BOKADIREKT_REVIEWS_URL = "https://www.bokadirekt.se/places/dear-beauty-60384/#staff";
+
 /** Dear Beauty salon, where Kela is based. */
 export const DEAR_BEAUTY_URL = "https://dearbeauty.se/";
 

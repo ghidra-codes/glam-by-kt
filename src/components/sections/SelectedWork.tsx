@@ -1,8 +1,9 @@
-import { Instagram } from "lucide-react";
+import { siInstagram } from "simple-icons";
 import workImage1 from "@/assets/images/work/work-01.webp";
 import workImage2 from "@/assets/images/work/work-02.webp";
 import workImage5 from "@/assets/images/work/work-03.webp";
 import workImage6 from "@/assets/images/work/work-04.webp";
+import { SimpleIcon } from "@/components/SimpleIcon";
 import { INSTAGRAM_HANDLE, INSTAGRAM_URL, useI18n } from "@/lib/i18n";
 
 const workImages = [workImage1, workImage2, workImage5, workImage6] as const;
@@ -29,10 +30,10 @@ export function SelectedWork() {
             rel="noopener noreferrer"
             className="text-ink hover:text-champagne-deep mt-5 inline-flex items-center gap-2 text-[0.6875rem] leading-none font-medium tracking-editorial uppercase transition-colors duration-300"
           >
-            <Instagram
+            <SimpleIcon
+              icon={siInstagram}
               aria-hidden="true"
               className="h-3.5 w-3.5 shrink-0 translate-y-[0.5px]"
-              strokeWidth={1.5}
             />
             {INSTAGRAM_HANDLE}
             <span className="sr-only">
@@ -50,6 +51,8 @@ export function SelectedWork() {
               <img
                 src={src}
                 alt="Hair work by Glam By KT"
+                width={600}
+                height={800}
                 loading="lazy"
                 className="h-full w-full object-cover"
               />

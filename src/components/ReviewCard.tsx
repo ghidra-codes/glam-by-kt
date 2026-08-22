@@ -15,7 +15,7 @@ export default function ReviewCard({ review }: { review: ReviewData }) {
   return (
     <li className="bg-background border-border/70 flex flex-col border p-8">
       <div className="mb-5 flex items-center">
-        <div className="flex gap-1" aria-label={`Rating: ${review.rating} out of 5 stars`}>
+        <div role="img" className="flex gap-1" aria-label={`Rating: ${review.rating} out of 5 stars`}>
           {Array.from({ length: review.rating }).map((_, index) => (
             <Star
               key={index}

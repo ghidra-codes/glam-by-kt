@@ -1,6 +1,8 @@
-import { ExternalLink, Instagram } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+import { siInstagram } from "simple-icons";
 import { BookingButton } from "@/components/BookingButton";
 import { BrandMark } from "@/components/BrandMark";
+import { SimpleIcon } from "@/components/SimpleIcon";
 import { DEAR_BEAUTY_URL, INSTAGRAM_HANDLE, INSTAGRAM_URL, useI18n } from "@/lib/i18n";
 
 const DIRECTIONS_URL =
@@ -48,7 +50,7 @@ export function SiteFooter() {
               aria-label={`Instagram ${INSTAGRAM_HANDLE}`}
               className="text-ink hover:text-champagne-deep inline-flex items-center gap-2 text-sm leading-none transition-colors duration-300"
             >
-              <Instagram aria-hidden="true" className="h-4 w-4 shrink-0" strokeWidth={1.5} />
+              <SimpleIcon icon={siInstagram} aria-hidden="true" className="h-4 w-4 shrink-0" />
               {INSTAGRAM_HANDLE}
               <span className="sr-only"> ({t.booking.newTab})</span>
             </a>

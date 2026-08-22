@@ -22,6 +22,7 @@ export function Hero() {
               className="text-champagne-deep font-semibold underline underline-offset-4 transition-opacity hover:opacity-70 whitespace-nowrap"
             >
               {t.hero.salonName}
+              <span className="sr-only"> ({t.booking.newTab})</span>
             </a>{" "}
             {t.hero.salonSuffix}
           </p>
@@ -41,6 +42,8 @@ export function Hero() {
           <img
             src={salonImage}
             alt={t.hero.portraitAlt}
+            width={1122}
+            height={1402}
             className="aspect-[4/5] w-full object-cover"
             loading="eager"
           />

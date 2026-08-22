@@ -28,8 +28,8 @@ const sizes: Record<NonNullable<BookingButtonProps["size"]>, string> = {
 };
 
 /**
- * Single entry point for every booking action.
- * Always external, always a new tab.
+ * Shared external CTA button.
+ * Defaults to the BokaDirekt booking URL.
  */
 export function BookingButton({
   url,

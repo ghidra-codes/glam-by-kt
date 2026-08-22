@@ -1,5 +1,5 @@
 import { BookingButton } from "@/components/BookingButton";
-import { useI18n } from "@/lib/i18n";
+import { BOKADIREKT_REVIEWS_URL, useI18n } from "@/lib/i18n";
 import ReviewCard from "../ReviewCard";
 
 export type ReviewData = {
@@ -40,7 +40,7 @@ export function Reviews() {
           </div>
 
           <div className="flex flex-col items-start justify-end lg:items-end">
-            <BookingButton variant="outline" className="hidden lg:inline-flex">
+            <BookingButton url={BOKADIREKT_REVIEWS_URL} variant="outline" className="hidden lg:inline-flex">
               {t.reviews.cta}
             </BookingButton>
           </div>
@@ -53,11 +53,7 @@ export function Reviews() {
         </ul>
 
         <div className="mt-10 flex justify-center lg:hidden">
-          <BookingButton
-            url="https://www.bokadirekt.se/places/dear-beauty-60384/#staff"
-            variant="outline"
-            className="w-full sm:w-auto"
-          >
+          <BookingButton url={BOKADIREKT_REVIEWS_URL} variant="outline" className="w-full sm:w-auto">
             {t.reviews.cta}
           </BookingButton>
         </div>

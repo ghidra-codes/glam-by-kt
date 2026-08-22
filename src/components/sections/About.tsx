@@ -16,6 +16,8 @@ export function About() {
             <img
               src={portraitImage}
               alt={t.about.portraitAlt}
+              width={1122}
+              height={1402}
               className="aspect-[4/5] w-full object-cover"
               loading="lazy"
             />
