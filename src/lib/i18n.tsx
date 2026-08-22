@@ -7,9 +7,6 @@ const STORAGE_KEY = "glam-by-kt-language";
 /** Official BokaDirekt profile — all appointments are booked externally. */
 export const BOOKING_URL = "https://www.bokadirekt.se/places/dear-beauty-60384/";
 
-/** Dear Beauty staff and reviews. */
-export const DEAR_BEUTY_STAFF_URL = "https://www.bokadirekt.se/places/dear-beauty-60384/#staff";
-
 /** Dear Beauty salon, where Kela is based. */
 export const DEAR_BEAUTY_URL = "https://dearbeauty.se/";
 
@@ -161,9 +158,8 @@ const translations = {
     },
     footer: {
       contact: "Kontakt",
-      contactPlaceholder: "TBD – kontaktuppgifter och adress inväntas.",
-      follow: "Följ",
-      book: "Boka",
+      directions: "Hitta hit",
+      links: "Länkar",
       rights: "Alla rättigheter förbehållna.",
     },
   },
@@ -309,9 +305,8 @@ const translations = {
     },
     footer: {
       contact: "Contact",
-      contactPlaceholder: "TBD – contact details and address pending.",
-      follow: "Follow",
-      book: "Book",
+      directions: "Directions",
+      links: "Links",
       rights: "All rights reserved.",
     },
   },

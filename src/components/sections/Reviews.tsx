@@ -53,7 +53,11 @@ export function Reviews() {
         </ul>
 
         <div className="mt-10 flex justify-center lg:hidden">
-          <BookingButton variant="outline" className="w-full sm:w-auto">
+          <BookingButton
+            url="https://www.bokadirekt.se/places/dear-beauty-60384/#staff"
+            variant="outline"
+            className="w-full sm:w-auto"
+          >
             {t.reviews.cta}
           </BookingButton>
         </div>
