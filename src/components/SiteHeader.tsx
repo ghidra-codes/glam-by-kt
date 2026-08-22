@@ -29,7 +29,7 @@ export function SiteHeader() {
   return (
     <header className="bg-background/85 sticky top-0 z-50 backdrop-blur-md md:border-b md:border-border/70">
       <div className="shell relative grid grid-cols-[minmax(0,1fr)_auto] items-center gap-6 py-2.5">
-        <a href="#top" className="min-w-0" aria-label="Glam By KT">
+        <a href="#top" className="-ml-2 min-w-0 md:ml-0" aria-label="Glam By KT">
           <BrandMark />
         </a>
 
@@ -70,9 +70,9 @@ export function SiteHeader() {
         </div>
 
         <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 md:hidden">
-          <span className="border-border/70 absolute bottom-0 left-0 w-6 border-b" />
+          <span className="border-border/70 absolute bottom-0 left-0 w-4 border-b" />
 
-          <span className="border-border/70 absolute right-0 bottom-0 left-[148px] border-b min-[420px]:left-[160px]" />
+          <span className="border-border/70 absolute right-0 bottom-0 left-[140px] border-b min-[420px]:left-[152px]" />
         </div>
       </div>
 
