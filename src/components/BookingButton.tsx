@@ -5,6 +5,7 @@ import { BOOKING_URL, useI18n } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 
 type BookingButtonProps = {
+  url?: string;
   variant?: "solid" | "outline" | "inverted";
   size?: "sm" | "md" | "lg";
   className?: string;
@@ -27,15 +28,21 @@ const sizes: Record<NonNullable<BookingButtonProps["size"]>, string> = {
 };
 
 /**
- * Single entry point for every booking action.
- * Always external, always a new tab.
+ * Shared external CTA button.
+ * Defaults to the BokaDirekt booking URL.
  */
-export function BookingButton({ variant = "solid", size = "md", className, children }: BookingButtonProps) {
+export function BookingButton({
+  url,
+  variant = "solid",
+  size = "md",
+  className,
+  children,
+}: BookingButtonProps) {
   const { t } = useI18n();
 
   return (
     <a
-      href={BOOKING_URL}
+      href={url || BOOKING_URL}
       target="_blank"
       rel="noopener noreferrer"
       className={cn(base, variants[variant], sizes[size], className)}

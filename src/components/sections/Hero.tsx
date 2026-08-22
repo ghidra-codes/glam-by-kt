@@ -1,19 +1,31 @@
-import salonImage from "@/assets/images/Kela-image002.png";
+import salonImage from "@/assets/images/kela/kela-salon.webp";
 import { BookingButton } from "@/components/BookingButton";
-import { useI18n } from "@/lib/i18n";
+import { DEAR_BEAUTY_URL, useI18n } from "@/lib/i18n";
 
 export function Hero() {
   const { t } = useI18n();
 
   return (
-    <section id="top" aria-labelledby="hero-title" className="shell pt-14 pb-20 lg:pt-20 lg:pb-28">
+    <section id="top" aria-labelledby="hero-title" className="shell pt-20 pb-20 lg:pb-28">
       <div className="grid items-end gap-14 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.85fr)] lg:gap-24">
         <div className="max-w-xl">
           <p className="eyebrow">{t.hero.eyebrow}</p>
           <h1 id="hero-title" className="text-ink mt-7 text-[clamp(2.75rem,7.5vw,5.25rem)] leading-[0.95]">
             {t.hero.title}
           </h1>
-          <p className="text-muted-foreground mt-8 max-w-md text-base leading-relaxed">{t.hero.lead}</p>
+          <p className="text-muted-foreground mt-8 max-w-md text-base leading-relaxed">
+            {t.hero.lead} {t.hero.salonPrefix}{" "}
+            <a
+              href={DEAR_BEAUTY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-champagne-deep font-semibold underline underline-offset-4 transition-opacity hover:opacity-70 whitespace-nowrap"
+            >
+              {t.hero.salonName}
+              <span className="sr-only"> ({t.booking.newTab})</span>
+            </a>{" "}
+            {t.hero.salonSuffix}
+          </p>
           <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
             <BookingButton size="lg" />
             <a
@@ -30,6 +42,8 @@ export function Hero() {
           <img
             src={salonImage}
             alt={t.hero.portraitAlt}
+            width={1122}
+            height={1402}
             className="aspect-[4/5] w-full object-cover"
             loading="eager"
           />

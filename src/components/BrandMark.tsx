@@ -1,16 +1,29 @@
-import logoMark from "@/assets/images/logos/Logo-GlamByKT.png";
+import logoMark from "@/assets/images/logos/logo-light-compressed.jpg";
 import { cn } from "@/lib/utils";
 
 export function BrandMark({ className, size = "sm" }: { className?: string; size?: "sm" | "lg" }) {
   const isLarge = size === "lg";
 
   return (
-    <span className={cn("relative flex min-w-0 items-center", !isLarge && "h-16 pl-[158px]", className)}>
+    <span
+      className={cn(
+        "relative flex min-w-0 items-center",
+        !isLarge && "h-16 pl-[120px] min-[420px]:pl-[132px] md:pl-[152px]",
+        className,
+      )}
+    >
       {!isLarge && (
-        <span className="absolute -top-2.5 left-0 z-10 flex h-[160px] w-[160px] items-start justify-center pt-2">
+        <span
+          className="
+          absolute -top-1 left-0 z-10 flex
+          h-[124px] w-[124px] items-start justify-center pt-1.5
+          min-[420px]:-top-1.5 min-[420px]:h-[136px] min-[420px]:w-[136px] min-[420px]:pt-2
+          md:-top-2.5 md:h-[160px] md:w-[160px]
+        "
+        >
           <span
             aria-hidden="true"
-            className="bg-background/85 border-border/70 pointer-events-none absolute inset-x-0 top-[84px] bottom-0 rounded-b-full border-x border-b backdrop-blur-md"
+            className="bg-background/85 border-border/70 pointer-events-none absolute inset-x-0 top-[84px] bottom-0 hidden rounded-b-full border-x border-b backdrop-blur-md md:block"
           />
 
           <img
@@ -19,12 +32,16 @@ export function BrandMark({ className, size = "sm" }: { className?: string; size
             aria-hidden="true"
             width={144}
             height={144}
-            className="relative z-10 h-36 w-36 shrink-0 rounded-full object-cover"
+            className="
+              relative z-10 h-28 w-28 shrink-0 rounded-full object-cover
+              min-[420px]:h-[124px] min-[420px]:w-[124px]
+              md:h-36 md:w-36
+            "
           />
         </span>
       )}
 
-      <span className="inline-flex min-w-0 flex-col leading-none">
+      <span className="inline-flex w-max shrink-0 flex-col leading-none">
         <span
           className={cn(
             "font-brand text-ink whitespace-nowrap",
@@ -33,7 +50,6 @@ export function BrandMark({ className, size = "sm" }: { className?: string; size
         >
           Glam By KT
         </span>
-
         <span className={cn("relative w-full", isLarge ? "mt-2 h-8" : "mt-1.5 h-3")}>
           <span
             className={cn(

@@ -1,4 +1,4 @@
-import portraitImage from "@/assets/images/Kela-image001.png";
+import portraitImage from "@/assets/images/kela/kela-portrait.webp";
 import { useI18n } from "@/lib/i18n";
 
 export function About() {
@@ -16,6 +16,8 @@ export function About() {
             <img
               src={portraitImage}
               alt={t.about.portraitAlt}
+              width={1122}
+              height={1402}
               className="aspect-[4/5] w-full object-cover"
               loading="lazy"
             />
