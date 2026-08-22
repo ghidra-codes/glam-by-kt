@@ -1,4 +1,4 @@
-import logoMark from "@/assets/images/logos/Logo-GlamByKT.png";
+import logoMark from "@/assets/images/logos/GlamByKT-lighter-logo-compressed.jpg";
 import { cn } from "@/lib/utils";
 
 export function BrandMark({ className, size = "sm" }: { className?: string; size?: "sm" | "lg" }) {
@@ -10,9 +10,9 @@ export function BrandMark({ className, size = "sm" }: { className?: string; size
         src={logoMark}
         alt=""
         aria-hidden="true"
-        width={isLarge ? 82 : 56}
-        height={isLarge ? 82 : 56}
-        className={cn("shrink-0 rounded-full object-cover", isLarge ? "h-[82px] w-[82px]" : "h-14 w-14")}
+        width={isLarge ? 96 : 68}
+        height={isLarge ? 96 : 68}
+        className={cn("shrink-0 rounded-full object-cover", isLarge ? "h-24 w-24" : "h-[68px] w-[68px]")}
       />
 
       <span

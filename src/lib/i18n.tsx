@@ -7,6 +7,9 @@ const STORAGE_KEY = "glam-by-kt-language";
 /** Official BokaDirekt profile — all appointments are booked externally. */
 export const BOOKING_URL = "https://www.bokadirekt.se/places/dear-beauty-60384/";
 
+/** Dear Beauty salon, where Kela is based. */
+export const DEAR_BEAUTY_URL = "https://dearbeauty.se/";
+
 /** Official Instagram for Glam By KT. */
 export const INSTAGRAM_URL = "https://www.instagram.com/glam_by_kt/";
 export const INSTAGRAM_HANDLE = "@GLAM_BY_KT";
@@ -33,7 +36,10 @@ const translations = {
     hero: {
       eyebrow: "Stockholm · Hår & Makeup",
       title: "Färg, precision och 25 års erfarenhet",
-      lead: "Glam By KT är Kelas personliga varumärke — hårstylist och makeupartist i Stockholm med specialistkompetens inom blekning, slingor, toning och färg.",
+      lead: "Glam By KT är Kelas personliga varumärke — hårstylist och makeupartist med specialistkompetens inom blekning, slingor, toning och färg.",
+      salonPrefix: "Kela är verksam på salongen",
+      salonName: "Dear Beauty",
+      salonSuffix: "i Stockholm.",
       secondary: "Se tjänster",
       portraitAlt: "Kela i salongen, iförd svart kavaj",
       facts: [
@@ -169,7 +175,10 @@ const translations = {
     hero: {
       eyebrow: "Stockholm · Hair & Makeup",
       title: "Colour, precision and 25 years of craft",
-      lead: "Glam By KT is Kela's personal brand — a Stockholm hair stylist and makeup artist with specialist expertise in bleaching, highlights, toning and colour.",
+      lead: "Glam By KT is Kela's personal brand — a hair stylist and makeup artist with specialist expertise in bleaching, highlights, toning and colour.",
+      salonPrefix: "Kela works at",
+      salonName: "Dear Beauty",
+      salonSuffix: "in Stockholm.",
       secondary: "View services",
       portraitAlt: "Kela in the salon, wearing a black blazer",
       facts: [

@@ -1,7 +1,11 @@
 import { Instagram } from "lucide-react";
+import workImage1 from "@/assets/images/work/image001.png";
+import workImage2 from "@/assets/images/work/image002.png";
+import workImage5 from "@/assets/images/work/image005.png";
+import workImage6 from "@/assets/images/work/image006.png";
 import { INSTAGRAM_HANDLE, INSTAGRAM_URL, useI18n } from "@/lib/i18n";
 
-const slots = ["a", "b", "c", "d"];
+const workImages = [workImage1, workImage2, workImage5, workImage6] as const;
 
 export function SelectedWork() {
   const { t } = useI18n();
@@ -15,8 +19,10 @@ export function SelectedWork() {
             {t.work.title}
           </h2>
         </div>
+
         <div className="max-w-lg self-end">
           <p className="text-muted-foreground text-base leading-relaxed">{t.work.lead}</p>
+
           <a
             href={INSTAGRAM_URL}
             target="_blank"
@@ -38,16 +44,19 @@ export function SelectedWork() {
       </div>
 
       <ul className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
-        {slots.map((slot) => (
-          <li key={slot}>
-            <div className="placeholder-surface border-border/70 flex aspect-[3/4] items-center justify-center border">
-              <span className="eyebrow">{t.work.placeholder}</span>
+        {workImages.map((src) => (
+          <li key={src}>
+            <div className="border-border/70 aspect-[3/4] overflow-hidden border">
+              <img
+                src={src}
+                alt="Hair work by Glam By KT"
+                loading="lazy"
+                className="h-full w-full object-cover"
+              />
             </div>
           </li>
         ))}
       </ul>
-
-      <p className="text-muted-foreground mt-8 text-xs">{t.work.pending}</p>
     </section>
   );
 }

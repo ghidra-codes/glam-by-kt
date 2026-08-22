@@ -1,6 +1,6 @@
 import salonImage from "@/assets/images/Kela-image002.png";
 import { BookingButton } from "@/components/BookingButton";
-import { useI18n } from "@/lib/i18n";
+import { DEAR_BEAUTY_URL, useI18n } from "@/lib/i18n";
 
 export function Hero() {
   const { t } = useI18n();
@@ -13,7 +13,18 @@ export function Hero() {
           <h1 id="hero-title" className="text-ink mt-7 text-[clamp(2.75rem,7.5vw,5.25rem)] leading-[0.95]">
             {t.hero.title}
           </h1>
-          <p className="text-muted-foreground mt-8 max-w-md text-base leading-relaxed">{t.hero.lead}</p>
+          <p className="text-muted-foreground mt-8 max-w-md text-base leading-relaxed">
+            {t.hero.lead} {t.hero.salonPrefix}{" "}
+            <a
+              href={DEAR_BEAUTY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-link whitespace-nowrap"
+            >
+              {t.hero.salonName}
+            </a>{" "}
+            {t.hero.salonSuffix}
+          </p>
           <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
             <BookingButton size="lg" />
             <a
