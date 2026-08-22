@@ -19,7 +19,7 @@ export function Hero() {
               href={DEAR_BEAUTY_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-link whitespace-nowrap"
+              className="text-champagne-deep font-semibold underline underline-offset-4 transition-opacity hover:opacity-70 whitespace-nowrap"
             >
               {t.hero.salonName}
             </a>{" "}

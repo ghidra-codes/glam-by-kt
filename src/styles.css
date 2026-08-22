@@ -181,10 +181,6 @@
   }
 }
 
-.inline-link {
-  @apply text-champagne-deep font-semibold underline underline-offset-4 transition-opacity hover:opacity-70;
-}
-
 /* Neutral placeholder surface for pending approved assets */
 @utility placeholder-surface {
   background-color: var(--color-sand);

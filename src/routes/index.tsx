@@ -6,6 +6,7 @@ import { BookingCta } from "@/components/sections/BookingCta";
 import { Education } from "@/components/sections/Education";
 import { Hero } from "@/components/sections/Hero";
 import { Masterclasses } from "@/components/sections/Masterclasses";
+import { Reviews } from "@/components/sections/Reviews";
 import { SelectedWork } from "@/components/sections/SelectedWork";
 import { Services } from "@/components/sections/Services";
 import { I18nProvider } from "@/lib/i18n";
@@ -40,6 +41,7 @@ function Index() {
           <Education />
           <Masterclasses />
           <SelectedWork />
+          <Reviews />
           <BookingCta />
         </main>
         <SiteFooter />
