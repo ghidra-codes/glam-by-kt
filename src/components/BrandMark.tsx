@@ -1,4 +1,4 @@
-import logoMark from "@/assets/images/logos/GlamByKT-lighter-logo-compressed.jpg";
+import logoMark from "@/assets/images/logos/logo-light-compressed.jpg";
 import { cn } from "@/lib/utils";
 
 export function BrandMark({ className, size = "sm" }: { className?: string; size?: "sm" | "lg" }) {

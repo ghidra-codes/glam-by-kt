@@ -1,5 +1,5 @@
-import masterclassImage from "@/assets/images/4.png";
-import lisapImage from "@/assets/images/7.png";
+import lisapImage from "@/assets/images/education/lisap-milano.webp";
+import masterclassImage from "@/assets/images/education/masterclass-milan.webp";
 import { useI18n } from "@/lib/i18n";
 
 export function Education() {

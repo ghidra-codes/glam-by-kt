@@ -1,4 +1,4 @@
-import portraitImage from "@/assets/images/Kela-image001.png";
+import portraitImage from "@/assets/images/kela/kela-portrait.webp";
 import { useI18n } from "@/lib/i18n";
 
 export function About() {

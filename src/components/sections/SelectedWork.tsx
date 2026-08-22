@@ -1,8 +1,8 @@
 import { Instagram } from "lucide-react";
-import workImage1 from "@/assets/images/work/image001.png";
-import workImage2 from "@/assets/images/work/image002.png";
-import workImage5 from "@/assets/images/work/image005.png";
-import workImage6 from "@/assets/images/work/image006.png";
+import workImage1 from "@/assets/images/work/work-01.webp";
+import workImage2 from "@/assets/images/work/work-02.webp";
+import workImage5 from "@/assets/images/work/work-03.webp";
+import workImage6 from "@/assets/images/work/work-04.webp";
 import { INSTAGRAM_HANDLE, INSTAGRAM_URL, useI18n } from "@/lib/i18n";
 
 const workImages = [workImage1, workImage2, workImage5, workImage6] as const;

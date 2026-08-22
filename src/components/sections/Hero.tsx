@@ -1,4 +1,4 @@
-import salonImage from "@/assets/images/Kela-image002.png";
+import salonImage from "@/assets/images/kela/kela-salon.webp";
 import { BookingButton } from "@/components/BookingButton";
 import { DEAR_BEAUTY_URL, useI18n } from "@/lib/i18n";
 
