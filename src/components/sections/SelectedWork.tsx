@@ -6,7 +6,7 @@ import workImage6 from "@/assets/images/work/work-04.webp";
 import { SimpleIcon } from "@/components/SimpleIcon";
 import { INSTAGRAM_HANDLE, INSTAGRAM_URL, useI18n } from "@/lib/i18n";
 
-const workImages = [workImage1, workImage2, workImage5, workImage6] as const;
+const workImages = [workImage2, workImage5, workImage1, workImage6] as const;
 
 export function SelectedWork() {
   const { t } = useI18n();
