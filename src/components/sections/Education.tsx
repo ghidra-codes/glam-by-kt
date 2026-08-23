@@ -25,15 +25,17 @@ export function Education() {
           {images.map((src, index) => (
             <li key={src} className="mx-auto w-full max-w-[21rem]">
               <figure>
-                <img
-                  src={src}
-                  alt={t.education.captions[index]}
-                  width={332}
-                  height={443}
-                  className="aspect-[3/4] w-full object-cover"
-                  loading="lazy"
-                  sizes="(min-width: 640px) 21rem, 100vw"
-                />
+                <div className="border-border/70 aspect-[3/4] overflow-hidden border">
+                  <img
+                    src={src}
+                    alt={t.education.captions[index]}
+                    width={332}
+                    height={443}
+                    className="h-full w-full object-cover"
+                    loading="lazy"
+                    sizes="(min-width: 640px) 21rem, 100vw"
+                  />
+                </div>
 
                 <figcaption className="text-muted-foreground mt-4 text-xs leading-relaxed">
                   {t.education.captions[index]}
@@ -41,11 +43,13 @@ export function Education() {
               </figure>
             </li>
           ))}
+
           <li className="mx-auto w-full max-w-[21rem]">
             <figure>
               <div className="placeholder-surface border-border/70 flex aspect-[3/4] w-full items-center justify-center border">
                 <span className="eyebrow">{t.education.placeholder}</span>
               </div>
+
               <figcaption className="text-muted-foreground mt-4 text-xs leading-relaxed">
                 {t.education.placeholderCaption}
               </figcaption>
