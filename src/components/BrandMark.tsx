@@ -1,4 +1,4 @@
-import logoMark from "@/assets/images/logos/logo-light-compressed.jpg";
+import logoMark from "@/assets/images/logos/logo-light.png";
 import { cn } from "@/lib/utils";
 
 export function BrandMark({ className, size = "sm" }: { className?: string; size?: "sm" | "lg" }) {
@@ -30,10 +30,10 @@ export function BrandMark({ className, size = "sm" }: { className?: string; size
             src={logoMark}
             alt=""
             aria-hidden="true"
-            width={144}
-            height={144}
+            width={1200}
+            height={1199}
             className="
-              relative z-10 h-28 w-28 shrink-0 rounded-full object-cover
+              relative z-10 h-28 w-28 shrink-0 rounded-full object-contain
               min-[420px]:h-[124px] min-[420px]:w-[124px]
               md:h-36 md:w-36
             "
