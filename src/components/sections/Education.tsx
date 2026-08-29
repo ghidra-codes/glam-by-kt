@@ -1,10 +1,11 @@
+import diplomaImage from "@/assets/images/education/education-diploma.webp";
 import lisapImage from "@/assets/images/education/lisap-milano.webp";
 import masterclassImage from "@/assets/images/education/masterclass-milan.webp";
 import { useI18n } from "@/lib/i18n";
 
 export function Education() {
   const { t } = useI18n();
-  const images = [masterclassImage, lisapImage];
+  const images = [masterclassImage, lisapImage, diplomaImage];
 
   return (
     <section id="education" aria-labelledby="education-title" className="bg-sand/60 py-20 lg:py-28">
@@ -43,18 +44,6 @@ export function Education() {
               </figure>
             </li>
           ))}
-
-          <li className="mx-auto w-full max-w-[21rem]">
-            <figure>
-              <div className="placeholder-surface border-border/70 flex aspect-[3/4] w-full items-center justify-center border">
-                <span className="eyebrow">{t.education.placeholder}</span>
-              </div>
-
-              <figcaption className="text-muted-foreground mt-4 text-xs leading-relaxed">
-                {t.education.placeholderCaption}
-              </figcaption>
-            </figure>
-          </li>
         </ul>
       </div>
     </section>
