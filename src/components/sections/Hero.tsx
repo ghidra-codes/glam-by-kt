@@ -6,7 +6,7 @@ export function Hero() {
   const { t } = useI18n();
 
   return (
-    <section id="top" aria-labelledby="hero-title" className="shell pt-14 pb-20 lg:pt-20 lg:pb-28">
+    <section id="top" aria-labelledby="hero-title" className="shell pt-20 pb-20 lg:pb-28">
       <div className="grid items-end gap-14 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.85fr)] lg:gap-24">
         <div className="max-w-xl">
           <p className="eyebrow">{t.hero.eyebrow}</p>

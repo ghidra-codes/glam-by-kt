@@ -27,9 +27,9 @@ export function SiteHeader() {
   }, [open]);
 
   return (
-    <header className="bg-background/85 border-border/70 sticky top-0 z-50 border-b backdrop-blur-md">
-      <div className="shell grid grid-cols-[minmax(0,1fr)_auto] items-center gap-6 py-2.5">
-        <a href="#top" className="min-w-0" aria-label="Glam By KT">
+    <header className="bg-background/85 sticky top-0 z-50 backdrop-blur-md md:border-b md:border-border/70">
+      <div className="shell relative grid grid-cols-[minmax(0,1fr)_auto] items-center gap-6 py-2.5">
+        <a href="#top" className="-ml-2 min-w-0 md:ml-0" aria-label="Glam By KT">
           <BrandMark />
         </a>
 
@@ -57,7 +57,7 @@ export function SiteHeader() {
             onClick={() => setOpen((value) => !value)}
             aria-expanded={open}
             aria-controls="mobile-nav"
-            className="text-ink flex shrink-0 cursor-pointer items-center gap-2 py-2 text-xs font-medium tracking-[0.16em] uppercase lg:hidden"
+            className="text-ink flex w-[4.75rem] shrink-0 cursor-pointer items-center justify-end gap-2 py-2 text-xs font-medium tracking-[0.16em] uppercase lg:hidden"
           >
             {open ? t.nav.close : t.nav.menu}
 
@@ -68,12 +68,18 @@ export function SiteHeader() {
             )}
           </button>
         </div>
+
+        <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 md:hidden">
+          <span className="border-border/70 absolute bottom-0 left-0 w-4 border-b" />
+
+          <span className="border-border/70 absolute right-0 bottom-0 left-[140px] border-b min-[420px]:left-[152px]" />
+        </div>
       </div>
 
       {open && (
-        <div id="mobile-nav" className="border-border/70 bg-background border-t lg:hidden">
+        <div id="mobile-nav" className="bg-background lg:hidden">
           <nav aria-label={t.nav.menu} className="shell py-8">
-            <ul className="flex flex-col gap-6">
+            <ul className="flex flex-col items-end gap-6">
               {links.map((link) => (
                 <li key={link.href}>
                   <a
