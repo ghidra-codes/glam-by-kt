@@ -124,13 +124,12 @@ const translations = {
     education: {
       eyebrow: "Utbildning & utbildarroll",
       title: "Kontinuerlig vidareutbildning",
-      lead: "Bilder från Kelas utbildningsmiljöer och utbildarroll — inte kundarbeten.",
+      lead: "Bilder från Kelas utbildningar, diplom och utbildarroll — inte kundarbeten.",
       captions: [
         "Avancerad Masterclass i slingteknik, Milano.",
-        "Lisap Milano — där Kela är Professional Technical Educator för Albanien.",
+        "Lisap Milano — där Kela är Technical Educator.",
+        "Kela med diplom och certifieringar från BES Academy.",
       ],
-      placeholder: "Bildplatshållare",
-      placeholderCaption: "TBD – bild inväntas.",
     },
     masterclass: {
       eyebrow: "Kommande",
@@ -145,6 +144,10 @@ const translations = {
       placeholder: "Bildplatshållare",
       pending: "TBD – godkända portföljbilder inväntas.",
       instagram: "Se senaste arbeten på Instagram",
+      carouselLabel: "Utvalt arbete",
+      imageAlt: "Hårarbete av Glam By KT",
+      previous: "Föregående bilder",
+      next: "Nästa bilder",
     },
     cta: {
       eyebrow: "Bokning",
@@ -271,13 +274,12 @@ const translations = {
     education: {
       eyebrow: "Education & teaching",
       title: "Continuous professional education",
-      lead: "Images from Kela's education environments and teaching work — not client results.",
+      lead: "Images from Kela's education, diplomas, and teaching work — not client results.",
       captions: [
         "Advanced highlight Masterclass, Milan.",
-        "Lisap Milano — where Kela is Professional Technical Educator for Albania.",
+        "Lisap Milano — where Kela is Technical Educator.",
+        "Kela with diplomas and certifications from BES Academy.",
       ],
-      placeholder: "Image placeholder",
-      placeholderCaption: "TBD — image pending.",
     },
     masterclass: {
       eyebrow: "Planned",
@@ -292,6 +294,10 @@ const translations = {
       placeholder: "Image placeholder",
       pending: "TBD – approved portfolio imagery pending.",
       instagram: "See the latest work on Instagram",
+      carouselLabel: "Selected work",
+      imageAlt: "Hair work by Glam By KT",
+      previous: "Previous images",
+      next: "Next images",
     },
     cta: {
       eyebrow: "Booking",

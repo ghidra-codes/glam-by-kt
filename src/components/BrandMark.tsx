@@ -10,7 +10,7 @@ export function BrandMark({ className, variant = "header" }: BrandMarkProps) {
   if (variant === "footer") {
     return (
       <span className={cn("flex w-max shrink-0 items-center gap-3", className)}>
-        <span className="h-24 w-24 shrink-0 overflow-hidden rounded-full bg-black p-0.5">
+        <span className="h-26 w-26 shrink-0 overflow-hidden rounded-full bg-black">
           <img
             src={logoMark}
             alt=""
