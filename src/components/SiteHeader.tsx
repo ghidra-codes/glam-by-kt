@@ -28,7 +28,7 @@ export function SiteHeader() {
 
   return (
     <header className="bg-background/85 sticky top-0 z-50 backdrop-blur-md md:border-b md:border-border/70">
-      <div className="shell relative grid grid-cols-[minmax(0,1fr)_auto] items-center gap-6 py-2.5">
+      <div className="shell relative grid grid-cols-[minmax(0,1fr)_auto] items-center gap-6 px-4 py-2.5 sm:px-6">
         <a href="#top" className="-ml-2 min-w-0 md:ml-0" aria-label="Glam By KT">
           <BrandMark />
         </a>
@@ -70,15 +70,22 @@ export function SiteHeader() {
         </div>
 
         <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 md:hidden">
-          <span className="border-border/70 absolute bottom-0 left-0 w-4 border-b" />
+          <span className="border-border/70 absolute bottom-0 left-0 w-2.5 border-b" />
 
-          <span className="border-border/70 absolute right-0 bottom-0 left-[140px] border-b min-[420px]:left-[152px]" />
+          <span
+            className="
+              border-border/70 absolute right-0 bottom-0 border-b
+              left-[132px]
+              min-[420px]:left-[144px]
+              sm:left-[152px]
+            "
+          />
         </div>
       </div>
 
       {open && (
         <div id="mobile-nav" className="bg-background lg:hidden">
-          <nav aria-label={t.nav.menu} className="shell py-8">
+          <nav aria-label={t.nav.menu} className="shell px-4 py-8 sm:px-6">
             <ul className="flex flex-col items-end gap-6">
               {links.map((link) => (
                 <li key={link.href}>

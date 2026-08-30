@@ -5,7 +5,7 @@ import { useI18n } from "@/lib/i18n";
 
 export function Education() {
   const { t } = useI18n();
-  const images = [masterclassImage, lisapImage, diplomaImage];
+  const images = [diplomaImage, lisapImage, masterclassImage];
 
   return (
     <section id="education" aria-labelledby="education-title" className="bg-sand/60 py-20 lg:py-28">

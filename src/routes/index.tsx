@@ -5,7 +5,6 @@ import { About } from "@/components/sections/About";
 import { BookingCta } from "@/components/sections/BookingCta";
 import { Education } from "@/components/sections/Education";
 import { Hero } from "@/components/sections/Hero";
-import { Masterclasses } from "@/components/sections/Masterclasses";
 import { Reviews } from "@/components/sections/Reviews";
 import { SelectedWork } from "@/components/sections/SelectedWork";
 import { Services } from "@/components/sections/Services";
@@ -39,7 +38,6 @@ function Index() {
           <Services />
           <About />
           <Education />
-          <Masterclasses />
           <SelectedWork />
           <Reviews />
           <BookingCta />

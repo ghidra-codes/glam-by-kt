@@ -124,7 +124,7 @@ const translations = {
     education: {
       eyebrow: "Utbildning & utbildarroll",
       title: "Kontinuerlig vidareutbildning",
-      lead: "Bilder från Kelas utbildningar, diplom och utbildarroll — inte kundarbeten.",
+      lead: "Bilder från Kelas utbildningar.",
       captions: [
         "Avancerad Masterclass i slingteknik, Milano.",
         "Lisap Milano — där Kela är Technical Educator.",
@@ -140,7 +140,7 @@ const translations = {
     work: {
       eyebrow: "Galleri",
       title: "Utvalt arbete",
-      lead: "Ett urval av färg- och stylingarbeten publiceras här när bilderna är godkända.",
+      lead: "Ett urval av färg- och stylingarbeten.",
       placeholder: "Bildplatshållare",
       pending: "TBD – godkända portföljbilder inväntas.",
       instagram: "Se senaste arbeten på Instagram",
@@ -274,7 +274,7 @@ const translations = {
     education: {
       eyebrow: "Education & teaching",
       title: "Continuous professional education",
-      lead: "Images from Kela's education, diplomas, and teaching work — not client results.",
+      lead: "Images from Kela's education",
       captions: [
         "Advanced highlight Masterclass, Milan.",
         "Lisap Milano — where Kela is Technical Educator.",
@@ -290,7 +290,7 @@ const translations = {
     work: {
       eyebrow: "Gallery",
       title: "Selected work",
-      lead: "A selection of colour and styling work will be published here once imagery is approved.",
+      lead: "A selection of colour and styling work",
       placeholder: "Image placeholder",
       pending: "TBD – approved portfolio imagery pending.",
       instagram: "See the latest work on Instagram",
