@@ -118,6 +118,11 @@
     -webkit-font-smoothing: antialiased;
   }
 
+  section[id],
+  footer[id] {
+    scroll-margin-top: 6rem;
+  }
+
   h1,
   h2,
   h3,
@@ -131,6 +136,17 @@
   :focus-visible {
     outline: 2px solid var(--color-champagne-deep);
     outline-offset: 3px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }
 
@@ -179,14 +195,4 @@
   &:focus-visible::after {
     transform: scaleX(1);
   }
-}
-
-/* Neutral placeholder surface for pending approved assets */
-@utility placeholder-surface {
-  background-color: var(--color-sand);
-  background-image: repeating-linear-gradient(
-    135deg,
-    color-mix(in oklab, var(--color-champagne) 22%, transparent) 0 1px,
-    transparent 1px 12px
-  );
 }

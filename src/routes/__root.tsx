@@ -25,8 +25,7 @@ function NotFoundComponent() {
   );
 }
 
-function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
-  console.error(error);
+function ErrorComponent({ reset }: { error: Error; reset: () => void }) {
   const router = useRouter();
 
   return (
@@ -63,20 +62,20 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Glam By KT — Hair & Makeup, Stockholm" },
+      { title: "Glam By KT | Frisör & makeupartist i Stockholm" },
       {
         name: "description",
         content:
-          "Glam By KT — Kela, hair stylist and makeup artist in Stockholm. Colour specialist: bleaching, highlights, toning.",
+          "Boka tid hos Kela, frisör och makeupartist i Stockholm med 25 års erfarenhet. Specialist på blekning, slingor, toning och hårfärg.",
       },
-      { property: "og:title", content: "Glam By KT — Hair & Makeup, Stockholm" },
+      { property: "og:title", content: "Glam By KT | Frisör & makeupartist i Stockholm" },
       {
         property: "og:description",
         content:
-          "Glam By KT — Kela, hair stylist and makeup artist in Stockholm. Colour specialist: bleaching, highlights, toning.",
+          "Boka tid hos Kela, frisör och makeupartist i Stockholm med 25 års erfarenhet. Specialist på blekning, slingor, toning och hårfärg.",
       },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:card", content: "summary" },
     ],
     links: [
       {
@@ -88,7 +87,7 @@ export const Route = createRootRoute({
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Karla:wght@300;400;500&family=Marcellus&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Karla:wght@400;500;600&family=Marcellus&display=swap",
       },
     ],
   }),

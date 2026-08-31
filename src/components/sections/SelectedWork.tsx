@@ -94,7 +94,7 @@ export function SelectedWork() {
                 <div className="border-border/70 aspect-[3/4] overflow-hidden border">
                   <img
                     src={src}
-                    alt={t.work.imageAlt}
+                    alt={t.work.imageAlts[index]}
                     width={600}
                     height={800}
                     loading="lazy"

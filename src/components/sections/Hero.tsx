@@ -46,6 +46,7 @@ export function Hero() {
             height={1402}
             className="aspect-[4/5] w-full object-cover"
             loading="eager"
+            fetchPriority="high"
           />
           <span
             aria-hidden="true"

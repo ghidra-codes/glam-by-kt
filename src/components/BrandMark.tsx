@@ -1,4 +1,4 @@
-import logoMark from "@/assets/images/logos/logo-light.png";
+import logoMark from "@/assets/images/logos/logo-light-compressed.jpg";
 import { cn } from "@/lib/utils";
 
 type BrandMarkProps = {

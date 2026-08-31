@@ -1,5 +1,5 @@
 import { Menu, X } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { BookingButton } from "@/components/BookingButton";
 import { BrandMark } from "@/components/BrandMark";
@@ -9,6 +9,8 @@ import { useI18n } from "@/lib/i18n";
 export function SiteHeader() {
   const { t } = useI18n();
   const [open, setOpen] = useState(false);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const firstMobileLinkRef = useRef<HTMLAnchorElement>(null);
 
   const links = [
     { href: "#services", label: t.nav.services },
@@ -21,8 +23,22 @@ export function SiteHeader() {
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
 
+    if (!open) return;
+
+    firstMobileLinkRef.current?.focus();
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key !== "Escape") return;
+
+      setOpen(false);
+      menuButtonRef.current?.focus();
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+
     return () => {
       document.body.style.overflow = "";
+      document.removeEventListener("keydown", handleKeyDown);
     };
   }, [open]);
 
@@ -53,6 +69,7 @@ export function SiteHeader() {
           <BookingButton size="sm" className="hidden sm:inline-flex" />
 
           <button
+            ref={menuButtonRef}
             type="button"
             onClick={() => setOpen((value) => !value)}
             aria-expanded={open}
@@ -87,9 +104,10 @@ export function SiteHeader() {
         <div id="mobile-nav" className="bg-background lg:hidden">
           <nav aria-label={t.nav.menu} className="shell px-4 py-8 sm:px-6">
             <ul className="flex flex-col items-end gap-6">
-              {links.map((link) => (
+              {links.map((link, index) => (
                 <li key={link.href}>
                   <a
+                    ref={index === 0 ? firstMobileLinkRef : undefined}
                     href={link.href}
                     onClick={() => setOpen(false)}
                     className="font-display text-ink block text-3xl"
