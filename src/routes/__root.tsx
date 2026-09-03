@@ -62,6 +62,10 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
+      {
+        name: "google-site-verification",
+        content: "A0ryZbeurD9ENU2SPrta2d4n7sVwsm1rJYLY-ySRRGs",
+      },
       { title: "Glam By KT | Frisör & makeupartist i Stockholm" },
       {
         name: "description",
